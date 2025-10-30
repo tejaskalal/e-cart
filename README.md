@@ -1,4 +1,4 @@
-# 🛒 Mock E-Commerce Cart App (Vibe Commerce Internship Assignment)
+# 🛒 Mock E-Commerce Cart App
 
 A simple full-stack shopping cart web app built for the **Vibe Commerce internship assignment**.  
 This project demonstrates core e-commerce flows — product listing, cart management, and mock checkout — using **React**, **Node.js/Express**, and **MongoDB**.
@@ -29,3 +29,4 @@ This project demonstrates core e-commerce flows — product listing, cart manage
 ---
 
 ## 📂 Folder Structure
+'''draw'''
