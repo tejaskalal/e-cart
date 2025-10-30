@@ -43,3 +43,22 @@ ecommerce-cart/
 │ │ └── App.js
 │
 └── README.md # Project documentation
+
+
+
+
+## ⚙️ Project Setup (Run Locally)
+
+Follow these steps to set up and run the project locally on your system:
+
+### 🖥️ Backend Setup (Node.js + Express)
+
+1. **Navigate to the backend folder**
+   ```bash
+   cd backend
+   npm start
+
+2. ### 🖥️ Frontend Setup (React.js)
+3. ``` bash
+   cd frontend
+   npm run dev
