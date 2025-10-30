@@ -29,4 +29,17 @@ This project demonstrates core e-commerce flows — product listing, cart manage
 ---
 
 ## 📂 Folder Structure
-'''draw'''
+ecommerce-cart/
+│
+├── backend/ # Node.js + Express backend
+│ ├── models/ # Mongoose models (Product, CartItem)
+│ ├── routes/ # API routes
+│ ├── server.js # Express server entry
+│
+├── frontend/ # React frontend
+│ ├── src/
+│ │ ├── components/ # Navbar, Footer, Cart
+│ │ ├── pages/ # Product, Checkout, Cart pages
+│ │ └── App.js
+│
+└── README.md # Project documentation
