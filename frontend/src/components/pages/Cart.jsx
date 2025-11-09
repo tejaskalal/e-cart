@@ -14,16 +14,16 @@ const Cart = () => {
     setTotal(newTotal);
   }, [cart]);
 
-  const handleRemove = (id) => {
-    const updatedCart = cart.filter((item) => item.id !== id);
+  const handleRemove = (_id) => {
+    const updatedCart = cart.filter((item) => item._id !== _id);
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  const handleQuantityChange = (id, newQty) => {
+  const handleQuantityChange = (_id, newQty) => {
     if (newQty < 1) return;
     const updatedCart = cart.map((item) =>
-      item.id === id ? { ...item, qty: newQty } : item
+      item._id === _id ? { ...item, qty: newQty } : item
     );
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
@@ -39,7 +39,7 @@ const Cart = () => {
         <>
           {cart.map((item) => (
             <div
-              key={item.id}
+              key={item._id}
               className="d-flex justify-content-between align-items-center border-bottom py-3"
             >
               <div>
@@ -50,20 +50,20 @@ const Cart = () => {
               <div className="d-flex align-items-center">
                 <button
                   className="btn btn-outline-secondary me-2"
-                  onClick={() => handleQuantityChange(item.id, item.qty - 1)}
+                  onClick={() => handleQuantityChange(item._id, item.qty - 1)}
                 >
                   −
                 </button>
                 <span>{item.qty}</span>
                 <button
                   className="btn btn-outline-secondary mx-2"
-                  onClick={() => handleQuantityChange(item.id, item.qty + 1)}
+                  onClick={() => handleQuantityChange(item._id, item.qty + 1)}
                 >
                   +
                 </button>
                 <button
                   className="btn btn-danger"
-                  onClick={() => handleRemove(item.id)}
+                  onClick={() => handleRemove(item._id)}
                 >
                   Remove
                 </button>
