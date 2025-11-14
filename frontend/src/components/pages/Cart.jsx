@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -75,7 +78,7 @@ const Cart = () => {
             <h4>Total: ₹{total.toFixed(2)}</h4>
             <button
               className="btn btn-success mt-3"
-              onClick={() => (window.location.href = "/api/checkout")}
+              onClick={() => navigate("/checkout")}
             >
               Proceed to Checkout
             </button>
