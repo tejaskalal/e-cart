@@ -75,7 +75,7 @@ const Cart = () => {
             <h4>Total: ₹{total.toFixed(2)}</h4>
             <button
               className="btn btn-success mt-3"
-              onClick={() => (window.location.href = "/checkout")}
+              onClick={() => (window.location.href = "/api/checkout")}
             >
               Proceed to Checkout
             </button>
